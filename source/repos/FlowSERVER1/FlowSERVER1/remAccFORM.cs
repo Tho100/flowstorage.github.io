@@ -99,6 +99,12 @@ namespace FlowSERVER1 {
                     guna2Button20.ForeColor = Color.Gainsboro; //.FromArgb(55, 0, 179);
                 }
 
+                if (CurrentLang == "CHI") {
+                    guna2Button22.Text = "Default";
+                    guna2Button22.Enabled = false;
+                    guna2Button22.ForeColor = Color.Gainsboro; //.FromArgb(55, 0, 179);
+                }
+
                 // @SUMMARY Retrieve account creation date and display the date on label
 
                 String _getJoinDate = "SELECT CREATED_DATE FROM information WHERE CUST_USERNAME = @username";
@@ -1334,6 +1340,12 @@ namespace FlowSERVER1 {
         private void guna2Button21_Click(object sender, EventArgs e) {
             languageChanger("POR");
             NewLang = "POR";
+            setupTime();
+        }
+
+        private void guna2Button22_Click(object sender, EventArgs e) {
+            languageChanger("CHI");
+            NewLang = "CHI";
             setupTime();
         }
     }
