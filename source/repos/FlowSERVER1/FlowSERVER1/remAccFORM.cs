@@ -93,6 +93,12 @@ namespace FlowSERVER1 {
                     guna2Button16.ForeColor = Color.Gainsboro; //.FromArgb(55, 0, 179);
                 }
 
+                if (CurrentLang == "FRE") {
+                    guna2Button20.Text = "Default";
+                    guna2Button20.Enabled = false;
+                    guna2Button20.ForeColor = Color.Gainsboro; //.FromArgb(55, 0, 179);
+                }
+
                 // @SUMMARY Retrieve account creation date and display the date on label
 
                 String _getJoinDate = "SELECT CREATED_DATE FROM information WHERE CUST_USERNAME = @username";
@@ -1231,6 +1237,7 @@ namespace FlowSERVER1 {
                 guna2Button17.Enabled = true;
 
             }
+
             if (_custLang == "ESP") {
                 guna2Button16.Text = "Default";
                 guna2Button16.ForeColor = Color.Gainsboro;
@@ -1253,8 +1260,32 @@ namespace FlowSERVER1 {
                 guna2Button15.Text = "Set as default";
                 guna2Button15.ForeColor = Color.FromArgb(55, 0, 179);
                 guna2Button15.Enabled = true;
-            }       
-         }
+            }
+
+            if (_custLang == "FRE") {
+                guna2Button20.Text = "Default";
+                guna2Button20.ForeColor = Color.Gainsboro;
+                guna2Button20.Enabled = false;
+                updateLang("FRE");
+                setupUILanguage("FRE");
+
+                guna2Button18.Text = "Set as default";
+                guna2Button18.ForeColor = Color.FromArgb(55, 0, 179);
+                guna2Button18.Enabled = true;
+
+                guna2Button19.Text = "Set as default";
+                guna2Button19.ForeColor = Color.FromArgb(55, 0, 179);
+                guna2Button19.Enabled = true;
+
+                guna2Button17.Text = "Set as default";
+                guna2Button17.ForeColor = Color.FromArgb(55, 0, 179);
+                guna2Button17.Enabled = true;
+
+                guna2Button15.Text = "Set as default";
+                guna2Button15.ForeColor = Color.FromArgb(55, 0, 179);
+                guna2Button15.Enabled = true;
+            }
+        }
 
         private void guna2Button18_Click(object sender, EventArgs e) {
             languageChanger("MY");
@@ -1291,6 +1322,12 @@ namespace FlowSERVER1 {
         private void guna2Button16_Click(object sender, EventArgs e) {
             languageChanger("ESP");
             NewLang = "ESP";
+            setupTime();
+        }
+
+        private void guna2Button20_Click(object sender, EventArgs e) {
+            languageChanger("FRE");
+            NewLang = "FRE";
             setupTime();
         }
     }

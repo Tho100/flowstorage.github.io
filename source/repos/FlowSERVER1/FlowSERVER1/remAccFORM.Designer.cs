@@ -1723,6 +1723,7 @@
             this.guna2Button20.Size = new System.Drawing.Size(129, 31);
             this.guna2Button20.TabIndex = 34;
             this.guna2Button20.Text = "Set as default";
+            this.guna2Button20.Click += new System.EventHandler(this.guna2Button20_Click);
             // 
             // label61
             // 
