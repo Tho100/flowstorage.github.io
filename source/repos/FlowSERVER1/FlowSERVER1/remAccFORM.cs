@@ -1330,5 +1330,11 @@ namespace FlowSERVER1 {
             NewLang = "FRE";
             setupTime();
         }
+
+        private void guna2Button21_Click(object sender, EventArgs e) {
+            languageChanger("POR");
+            NewLang = "POR";
+            setupTime();
+        }
     }
 }
